@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>디지털 마케팅 관련 교육 (링크 포함)</title>
+
+  <!-- Pretendard (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#101828;
+      --muted:#475467;
+      --border:#D0D5DD;
+      --head:#E6F0FA;
+      --rowAlt:#FCE4D6;
+      --chip:#0F172A;
+      --chipText:#fff;
+      --link:#2563EB;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      padding:24px;
+      background:var(--bg);
+      color:var(--text);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Apple SD Gothic Neo","Noto Sans KR", sans-serif;
+      line-height:1.45;
+    }
+    .wrap{max-width:1200px;margin:0 auto}
+    h1{
+      margin:0 0 14px 0;
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:-0.2px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .diamond{
+      width:10px;height:10px;
+      transform:rotate(45deg);
+      background:#111827;
+      display:inline-block;
+      border-radius:2px;
+    }
+    .sub{
+      margin:0 0 16px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Table wrapper (mobile swipe) */
+    .table-wrap{
+      width:100%;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:#fff;
+    }
+
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      min-width:1000px; /* ensures horizontal swipe on small screens */
+      font-size:13px;
+    }
+
+    thead th{
+      position:sticky;
+      top:0;
+      z-index:2;
+      background:var(--head);
+      color:#0B2545;
+      text-align:center;
+      padding:10px 10px;
+      border-bottom:1px solid var(--border);
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    tbody td{
+      padding:10px 10px;
+      border-bottom:1px solid var(--border);
+      vertical-align:middle;
+      background:#fff;
+    }
+
+    tbody tr.group-row td{
+      background:var(--rowAlt);
+      font-weight:800;
+    }
+
+    tbody tr:last-child td{border-bottom:none}
+
+    td.col-course{width:32%; font-weight:600;}
+    td.col-link{width:42%;}
+    td.col-fee{width:10%; text-align:center; font-variant-numeric: tabular-nums;}
+    td.col-mode{width:8%; text-align:center;}
+    td.col-note{width:18%; color:var(--muted);}
+
+    a{
+      color:var(--link);
+      text-decoration:underline;
+      word-break:break-all;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      background:var(--chip);
+      color:var(--chipText);
+      min-width:64px;
+    }
+    .badge.on{background:#16A34A;}
+    .badge.off{background:#64748B;}
+    .badge.onoff{background:#F59E0B; color:#111827;}
+
+    .actions{
+      display:flex;
+      gap:8px;
+      margin:10px 0 14px 0;
+      flex-wrap:wrap;
+    }
+    button{
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      border-radius:10px;
+      padding:8px 10px;
+      font-weight:700;
+      cursor:pointer;
+      font-family:inherit;
+    }
+    button:hover{background:#F8FAFC}
+
+    /* Print: avoid cutting tables */
+    @media print{
+      body{padding:0}
+      .actions,.sub{display:none !important;}
+      .table-wrap{overflow:visible !important; border:none;}
+      table{min-width:0 !important; width:100% !important;}
+      thead th{position:static;}
+      tr, td, th{page-break-inside:avoid;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1><span class="diamond"></span> 디지털 마케팅 관련 교육</h1>
+    <p class="sub">표는 모바일에서 좌우 스와이프로 확인할 수 있고, 링크는 클릭하면 새 창으로 열립니다.</p>
+
+    <div class="actions">
+      <button type="button" onclick="copyAllLinks()">링크만 복사</button>
+      <button type="button" onclick="window.print()">인쇄/PDF</button>
+    </div>
+
+    <div class="table-wrap" aria-label="디지털 마케팅 교육 목록">
+      <table>
+        <thead>
+          <tr>
+            <th>사이트 및 과정</th>
+            <th>링크</th>
+            <th>교육비</th>
+            <th>상태</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row">
+            <td class="col-course">한국생산성본부 &gt; 마케팅전략</td>
+            <td class="col-link"><a href="https://www.kpc.or.kr/PTWED002_index.do?cclno=49050255&type=A&gubun=depth3" target="_blank" rel="noopener noreferrer">https://www.kpc.or.kr/PTWED002_index.do?cclno=49050255&type=A&gubun=depth3</a></td>
+            <td class="col-fee"></td>
+            <td class="col-mode"></td>
+            <td class="col-note"></td>
+          </tr>
+
+          <tr>
+            <td class="col-course">소셜미디어 활용, 트렌디한 마케팅 전략의 모든 것 (ChatGPT 활용)</td>
+            <td class="col-link"><a href="https://www.kpc.or.kr/PTWED003_dtil_view.do?ecno=47663" target="_blank" rel="noopener noreferrer">https://www.kpc.or.kr/PTWED003_dtil_view.do?ecno=47663</a></td>
+            <td class="col-fee">290,000</td>
+            <td class="col-mode"><span class="badge off">Off</span></td>
+            <td class="col-note"></td>
+          </tr>
+
+          <tr>
+            <td class="col-course">디지털 마케팅 커뮤니케이션 (ChatGPT 활용)</td>
+            <td class="col-link"><a href="https://www.kpc.or.kr/PTWED003_dtil_view.do?ecno=47638" target="_blank" rel="noopener noreferrer">https://www.kpc.or.kr/PTWED003_dtil_view.do?ecno=47638</a></td>
+            <td class="col-fee">580,000</td>
+            <td class="col-mode"><span class="badge onoff">On/Off</span></td>
+            <td class="col-note"></td>
+          </tr>
+
+          <tr>
+            <td class="col-course">[자격과정] 마케팅관리사</td>
+            <td class="col-link"><a href="https://www.kpc.or.kr/PTWED003_dtil_view.do?cono=145210&ecno=45525" target="_blank" rel="noopener noreferrer">https://www.kpc.or.kr/PTWED003_dtil_view.do?cono=145210&amp;ecno=45525</a></td>
+            <td class="col-fee">1,850,000</td>
+            <td class="col-mode"><span class="badge off">Off</span></td>
+            <td class="col-note">현재 교육 일정이 있진 않음. 교육문의 필요</td>
+          </tr>
+
+          <tr>
+            <td class="col-course">디지털 마케팅 커뮤니케이션</td>
+            <td class="col-link"><a href="https://www.kpc.or.kr/PTWED003_dtil_view.do?cono=129753" target="_blank" rel="noopener noreferrer">https://www.kpc.or.kr/PTWED003_dtil_view.do?cono=129753</a></td>
+            <td class="col-fee">530,000</td>
+            <td class="col-mode"><span class="badge off">Off</span></td>
+            <td class="col-note">현재 교육 일정이 있진 않음. 교육문의 필요</td>
+          </tr>
+
+          <tr class="group-row">
+            <td class="col-course">패스트캠퍼스 &gt; 마케팅</td>
+            <td class="col-link"><a href="https://fastcampus.co.kr/category_online_marketing" target="_blank" rel="noopener noreferrer">https://fastcampus.co.kr/category_online_marketing</a></td>
+            <td class="col-fee"></td>
+            <td class="col-mode"></td>
+            <td class="col-note"></td>
+          </tr>
+
+          <tr>
+            <td class="col-course">한 번에 끝내는 디지털 마케팅 초격차 패키지: signature plus</td>
+            <td class="col-link"><a href="https://fastcampus.co.kr/mktg_online_digitmktg" target="_blank" rel="noopener noreferrer">https://fastcampus.co.kr/mktg_online_digitmktg</a></td>
+            <td class="col-fee">433,000</td>
+            <td class="col-mode"><span class="badge on">On</span></td>
+            <td class="col-note"></td>
+          </tr>
+
+          <tr>
+            <td class="col-course">50개 케이스로 끝내는 디지털 마케팅 : 기획부터 성과 개선까지 초격차 패키지</td>
+            <td class="col-link"><a href="https://fastcampus.co.kr/mktg_online_50cases" target="_blank" rel="noopener noreferrer">https://fastcampus.co.kr/mktg_online_50cases</a></td>
+            <td class="col-fee">186,000</td>
+            <td class="col-mode"><span class="badge on">On</span></td>
+            <td class="col-note"></td>
+          </tr>
+
+          <tr>
+            <td class="col-course">AI로 끝내는 디지털 마케팅 : 콘텐츠 제작부터 마케팅 자동화까지</td>
+            <td class="col-link"><a href="https://fastcampus.co.kr/mktg_online_aidigitmktg" target="_blank" rel="noopener noreferrer">https://fastcampus.co.kr/mktg_online_aidigitmktg</a></td>
+            <td class="col-fee">212,000</td>
+            <td class="col-mode"><span class="badge on">On</span></td>
+            <td class="col-note"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function copyAllLinks(){
+      const links = Array.from(document.querySelectorAll('tbody a')).map(a => a.href);
+      const text = links.join('\n');
+      navigator.clipboard.writeText(text).then(() => {
+        alert('링크를 복사했습니다.\n\n' + links.length + '개');
+      }).catch(() => {
+        prompt('복사 권한이 없어 아래 텍스트를 수동 복사해주세요.', text);
+      });
+    }
+  </script>
+</body>
+</html>
